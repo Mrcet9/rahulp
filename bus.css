@@ -1,0 +1,114 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Dark Mode Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+/* Glassmorphic Container */
+.container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    color: #00ffff;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #00ffff;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    font-size: 14px;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #00ffcc;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: rgba(0, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: inset 0px 0px 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Placeholder */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus Effect */
+input:focus {
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+/* Payment Button */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background: #00ffff;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #00ccff;
+    box-shadow: 0 0 16px rgba(0, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Status Message */
+#status-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,261 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Animation (Gradient Transition) */
+body {
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #4a90e2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite alternate ease-in-out;
+    color: white;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Particles Effect */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('particles.png'); /* Use a transparent particle image */
+    opacity: 0.2;
+    animation: floatParticles 20s linear infinite;
+}
+
+@keyframes floatParticles {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+/* Header (Top Section) */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Navbar */
+nav {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Advanced Hover Effects */
+nav ul li a:hover {
+    color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* Animated Banner Section */
+.banner {
+    background: url('banner1.jpg') no-repeat center center/cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Animated Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #1d3557;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+    box-shadow: 0px 0px 15px #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Banner Section */
+.banner {
+    background: url('banner1.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns button at the bottom */
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px; /* Adjust space for button */
+}
+
+/* Overlay Effect for Better Visibility */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Banner Content */
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Apply Now Button */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #1d3557;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff9900, #ffcc00);
+    box-shadow: 0px 0px 20px #ffcc00;
+}
+
+/* Glow Animation */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner {
+        height: 350px;
+        padding-bottom: 30px;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}

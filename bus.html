@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Pass Payment</title>
+    <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+    <div class="container">
+        <h2>💳 Secure Bus Pass Payment</h2>
+
+        <form id="payment-form">
+            <label>👤 Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>📧 Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>💰 Payment Method</label>
+            <select id="payment-method">
+                <option value="card">💳 Credit/Debit Card</option>
+                <option value="upi">📱 UPI</option>
+            </select>
+
+            <!-- Card Payment Fields -->
+            <div id="card-details">
+                <label>💳 Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter card number" required>
+
+                <label>📅 Expiry Date</label>
+                <input type="text" id="expiry" placeholder="MM/YY" required>
+
+                <label>🔒 CVV</label>
+                <input type="password" id="cvv" placeholder="CVV" required>
+            </div>
+
+            <!-- UPI Payment Field -->
+            <div id="upi-details" style="display: none;">
+                <label>📱 UPI ID</label>
+                <input type="text" id="upi-id" placeholder="your@upi" required>
+            </div>
+
+            <button type="submit">✅ Pay Now</button>
+        </form>
+
+        <p id="status-message"></p>
+    </div>
+
+    <script src="bus.js"></script>
+</body>
+</html>
